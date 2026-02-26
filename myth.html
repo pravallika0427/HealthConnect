@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fake Health Information Detector</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="myth-page">
+
+<!-- 🎙️ Voice Control Button (ADDED) -->
+<div class="voice-btn" onclick="startListening()">🎙️</div>
+
+<header class="hero">
+  <h1 id="mythTitle">Fake Health Information Detector</h1>
+  <p id="mythSubtitle">Verify health messages &amp; WhatsApp forwards</p>
+</header>
+
+<div class="container">
+  <div class="myth-card">
+
+    <h3 id="mythHeading">Paste health message below</h3>
+    <p style="font-size:13px; color:#666; margin-top:4px; margin-bottom:10px;">
+      Example: “This drink gives 100% cure for cancer in 3 days” or
+      “No need vaccine, just use this home remedy”.
+    </p>
+
+    <textarea
+      id="msg"
+      placeholder="Paste WhatsApp forward or health claim here..."
+      rows="5"></textarea>
+
+    <div style="display:flex; gap:10px; justify-content:center; margin-top:10px;">
+      <button onclick="checkMyth()" id="mythButton" style="width:50%;">
+        Verify
+      </button>
+
+      <button type="button"
+              onclick="clearMyth()"
+              style="width:30%; background-color:#9e9e9e;">
+        Clear
+      </button>
+    </div>
+
+    <div id="mythResult" class="result-box" style="display:none;"></div>
+
+  </div>
+</div>
+
+<!-- ✅ Scripts (Voice Assistant Added) -->
+<script src="script.js"></script>
+<script src="voice.js"></script>
+<script src="voice-control.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Emergency Support</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="emergency-page">
+
+<header class="hero">
+  <h1 id="emTitle">Emergency Support</h1>
+  <p id="emSubtitle">Quick access to emergency services & nearby hospitals</p>
+</header>
+
+<div class="container">
+
+  <!-- BOX 1 EMERGENCY CONTACTS -->
+  <div class="emergency-box">
+    <h3 id="emContactsTitle">Emergency Contacts</h3>
+
+    <div class="emergency-contacts">
+      <a href="tel:108" class="btn-emergency" id="emAmbulance">🚑 Call Ambulance (108)</a>
+      <a href="tel:100" class="btn-emergency" id="emPolice">👮 Call Police (100)</a>
+      <a href="tel:101" class="btn-emergency" id="emFire">🔥 Fire Service (101)</a>
+      <a href="tel:18005990019" class="btn-emergency" id="emMental">🧠 Mental Health Helpline</a>
+      <a href="tel:181" class="btn-emergency" id="emWomen">👩 Women Helpline (181)</a>
+      <a href="tel:1098" class="btn-emergency" id="emChild">🧒 Child Helpline (1098)</a>
+
+      <!-- Desktop hint -->
+      <p id="callNote" class="info-text">
+        On a laptop, these buttons only open your calling app. Use your phone to dial the numbers.
+      </p>
+
+      <!-- Extra details input -->
+      <input
+        id="customLocation"
+        class="extra-location-input"
+        placeholder="Add nearby landmark / address (optional)">
+
+      <button id="whatsappHelpBtn" class="btn-emergency" style="background:#25D366;">
+        📍 Share Location on WhatsApp
+      </button>
+      <p id="waStatus" class="info-text"></p>
+    </div>
+  </div>
+
+  <!-- BOX 2: GOOGLE MAPS -->
+  <div class="emergency-box">
+    <h3 id="emHospTitle">🏥 Nearby Hospitals</h3>
+
+    <p id="emHospText">Click below to view nearby hospitals on Google Maps:</p>
+
+    <a href="https://www.google.com/maps/search/hospitals+near+me"
+       target="_blank"
+       class="map-btn"
+       id="emHospBtn">
+      🏥 Find Nearby Hospitals
+    </a>
+
+    <p id="emHospNote" style="font-size:13px;color:#666;margin-top:10px;">
+      ⚠ Location access depends on your device settings.
+    </p>
+  </div>
+
+  <!-- BOX 3 EMERGENCY TIPS -->
+  <div class="emergency-box">
+    <h3 id="emTipsTitle">Emergency Tips & First Aid</h3>
+
+    <details>
+      <summary id="tipHeart">❤️ Heart Attack</summary>
+      <p id="tipHeartText">Call ambulance immediately. If trained, perform CPR.</p>
+    </details>
+
+    <details>
+      <summary id="tipBreath">😮💨 Breathing Problem</summary>
+      <p id="tipBreathText">Loosen tight clothes. Keep the person calm.</p>
+    </details>
+
+    <details>
+      <summary id="tipBurns">🔥 Burns</summary>
+      <p id="tipBurnsText">Cool the burn with clean running water. Do not apply oil.</p>
+    </details>
+
+    <details>
+      <summary id="tipBleeding">🩸 Heavy Bleeding</summary>
+      <p id="tipBleedingText">Apply firm pressure using a clean cloth.</p>
+    </details>
+
+    <details>
+      <summary id="tipFaint">🤕 Fainting</summary>
+      <p id="tipFaintText">Lay the person flat and raise legs slightly.</p>
+    </details>
+
+    <p id="emTipsNote" style="font-size:13px;color:#666;">
+      These are basic first-aid tips. Always seek medical help.
+    </p>
+  </div>
+
+</div><!-- /container -->
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HealthConnect</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Voice Control Button -->
+<div class="voice-btn" onclick="startListening()">🎙️</div>
+  <!-- Voice Assistant Button -->
+
+
+
+  <!-- Language Icon Button -->
+<div class="lang-btn" onclick="openLangMenu()">🌐</div>
+<!-- Side Language Menu -->
+<div id="langMenu" class="lang-menu">
+  <span class="close-btn" onclick="closeLangMenu()">✖</span>
+
+  <h3>Select Language</h3>
+
+  <button onclick="changeLanguage('en')">English</button>
+  <button onclick="changeLanguage('te')">తెలుగు</button>
+  <button onclick="changeLanguage('hi')">हिंदी</button>
+</div>
+
+<header class="hero">
+  <div class="hero-content">
+
+    <img src="logo.png" class="logo" alt="HealthConnect Logo">
+
+    <div class="hero-text">
+      <h1 data-lang="title">HealthConnect</h1>
+<p data-lang="tagline">Your Unified Digital Health Support Platform</p>
+    </div>
+
+  </div>
+</header>
+
+<section class="services services-grid-2">
+
+  <!-- Symptom Checker -->
+  <div class="card">
+    <img src="https://img.icons8.com/color/96/stethoscope.png" alt="Symptom Checker">
+    <h3 data-lang="symptom">Symptom Checker</h3>
+<p data-lang="symptom_desc">Check disease risk based on symptoms.</p>
+    <a href="symptom.html">Open</a>
+  </div>
+
+  <!-- Mental Health -->
+  <div class="card">
+    <img src="https://img.icons8.com/color/96/mental-health.png" alt="Mental Health">
+    <h3 data-lang="mental">Mental Health</h3>
+<p data-lang="mental_desc">Self-assessment for stress & anxiety.</p>
+
+    <a href="mental.html">Open</a>
+  </div>
+
+  <!-- Fake Health News -->
+  <div class="card">
+    <img src="https://img.icons8.com/color/96/error.png" alt="Fake Health News">
+    <h3 data-lang="fake">Fake Health News</h3>
+<p data-lang="fake_desc">Detect misinformation & health myths.</p>
+
+    <a href="myth.html">Open</a>
+  </div>
+
+  <!-- Emergency Support -->
+  <div class="card">
+    <img src="https://img.icons8.com/color/96/ambulance.png" alt="Emergency Support">
+    <h3 data-lang="emergency">Emergency Support</h3>
+<p data-lang="emergency_desc">Nearby hospitals & emergency numbers.</p>
+    <a href="emergency.html">Open</a>
+  </div>
+
+</section>
+
+<p style="text-align:center; color:#555;">
+  Simple • Reliable • Accessible Healthcare Support
+</p>
+
+<footer>
+  <p>© 2025 HealthConnect. All rights reserved.</p>
+</footer>
+<script src="lang.js"></script>
+<script src="voice.js"></script>
+<script src="voice-control.js"></script>
+
+</body>
+</html>

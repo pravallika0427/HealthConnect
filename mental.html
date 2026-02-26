@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mental Health Assessment</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Mental Health Self-Assessment</h1>
+  <p>Answer honestly to understand your mental well-being</p>
+</header>
+
+<div class="container mental-card">
+
+  <!-- AGE SELECTION -->
+  <div id="ageBox" class="mental-center">
+    <h3>👤 Select Your Age Group</h3>
+    <select id="age_ans">
+      <option value="">-- Select Age Group --</option>
+      <option value="teen">Under 18</option>
+      <option value="adult">18 - 40</option>
+      <option value="senior">Above 40</option>
+    </select>
+    <button onclick="startMental()">Next</button>
+  </div>
+
+  <!-- ================= TEEN QUESTIONS ================= -->
+  <!-- tq1 to tq10 -->
+  <div id="tq1" data-age="teen" class="mental-center" style="display:none;">
+    <h3>1️⃣ Do you feel pressure from studies?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq2" data-age="teen" class="mental-center" style="display:none;">
+    <h3>2️⃣ Do exams make you anxious?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq3" data-age="teen" class="mental-center" style="display:none;">
+    <h3>3️⃣ Do you use mobile too much?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq4" data-age="teen" class="mental-center" style="display:none;">
+    <h3>4️⃣ Do you feel lonely?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq5" data-age="teen" class="mental-center" style="display:none;">
+    <h3>5️⃣ Do you get irritated easily?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq6" data-age="teen" class="mental-center" style="display:none;">
+    <h3>6️⃣ Do you feel mentally tired?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq7" data-age="teen" class="mental-center" style="display:none;">
+    <h3>7️⃣ Do you avoid talking to others?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq8" data-age="teen" class="mental-center" style="display:none;">
+    <h3>8️⃣ Do parents pressure you a lot?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq9" data-age="teen" class="mental-center" style="display:none;">
+    <h3>9️⃣ Are you worried about future?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="tq10" data-age="teen" class="mental-center" style="display:none;">
+    <h3>🔟 Do you feel emotionally exhausted?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Check Result</button>
+  </div>
+
+  <!-- ================= ADULT QUESTIONS ================= -->
+  <!-- aq1 to aq10 -->
+  <div id="aq1" data-age="adult" class="mental-center" style="display:none;">
+    <h3>1️⃣ Do you feel work pressure?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq2" data-age="adult" class="mental-center" style="display:none;">
+    <h3>2️⃣ Do deadlines stress you?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq3" data-age="adult" class="mental-center" style="display:none;">
+    <h3>3️⃣ Do you struggle with work-life balance?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq4" data-age="adult" class="mental-center" style="display:none;">
+    <h3>4️⃣ Do financial issues worry you?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq5" data-age="adult" class="mental-center" style="display:none;">
+    <h3>5️⃣ Do you feel exhausted after work?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq6" data-age="adult" class="mental-center" style="display:none;">
+    <h3>6️⃣ Do you overthink at night?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq7" data-age="adult" class="mental-center" style="display:none;">
+    <h3>7️⃣ Do you feel emotionally drained?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq8" data-age="adult" class="mental-center" style="display:none;">
+    <h3>8️⃣ Do you get irritated easily?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq9" data-age="adult" class="mental-center" style="display:none;">
+    <h3>9️⃣ Do you avoid social interactions?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="aq10" data-age="adult" class="mental-center" style="display:none;">
+    <h3>🔟 Do you feel mentally exhausted?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Check Result</button>
+  </div>
+
+  <!-- ================= SENIOR QUESTIONS ================= -->
+  <!-- sq1 to sq10 -->
+  <div id="sq1" data-age="senior" class="mental-center" style="display:none;">
+    <h3>1️⃣ Do you feel lonely?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq2" data-age="senior" class="mental-center" style="display:none;">
+    <h3>2️⃣ Do health issues worry you?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq3" data-age="senior" class="mental-center" style="display:none;">
+    <h3>3️⃣ Do you have sleep problems?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq4" data-age="senior" class="mental-center" style="display:none;">
+    <h3>4️⃣ Do you feel dependent on others?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq5" data-age="senior" class="mental-center" style="display:none;">
+    <h3>5️⃣ Do you feel anxious often?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq6" data-age="senior" class="mental-center" style="display:none;">
+    <h3>6️⃣ Do you avoid meeting people?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq7" data-age="senior" class="mental-center" style="display:none;">
+    <h3>7️⃣ Do you feel mentally weak?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq8" data-age="senior" class="mental-center" style="display:none;">
+    <h3>8️⃣ Do you feel forgotten?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq9" data-age="senior" class="mental-center" style="display:none;">
+    <h3>9️⃣ Do you feel helpless?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Next</button>
+  </div>
+
+  <div id="sq10" data-age="senior" class="mental-center" style="display:none;">
+    <h3>🔟 Do you feel emotionally drained?</h3>
+    <select><option value="0">No</option><option value="1">Sometimes</option><option value="2">Often</option><option value="3">Always</option></select>
+    <button onclick="nextMental()">Check Result</button>
+  </div>
+
+  <!-- RESULT -->
+  <div id="mentalResult" class="result-box" style="display:none;"></div>
+
+</div>
+
+</body>
+</html>

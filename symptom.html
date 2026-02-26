@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Symptom Checker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+</head>
+
+<body class="symptom-page">
+
+<!-- 🎙️ Voice Control Button -->
+<div class="voice-btn" onclick="startListening()">🎙️</div>
+
+<header class="hero">
+  <h1 id="symptomTitle">Symptom Checker</h1>
+  <p id="symptomSubtitle">Check your health risk based on symptoms</p>
+</header>
+
+<div class="container">
+
+  <h3 id="symptomHeading">Select your symptoms</h3>
+  <p id="symptomHint" style="font-size:14px; color:#666;">
+    Choose all symptoms that apply to you
+  </p>
+
+  <!-- ================= SYMPTOMS ================= -->
+  <div class="symptom-grid">
+
+    <label class="symptom-card"><input type="checkbox" id="fever"> 🌡 Fever</label>
+    <label class="symptom-card"><input type="checkbox" id="cough"> 🤧 Cough</label>
+    <label class="symptom-card"><input type="checkbox" id="headache"> 🤕 Headache</label>
+    <label class="symptom-card"><input type="checkbox" id="fatigue"> 😴 Fatigue</label>
+    <label class="symptom-card"><input type="checkbox" id="chest"> ❤ Chest Pain</label>
+    <label class="symptom-card"><input type="checkbox" id="breath"> 😮‍💨 Breathlessness</label>
+    <label class="symptom-card"><input type="checkbox" id="cognitive"> 🧠 Cognitive Changes</label>
+    <label class="symptom-card"><input type="checkbox" id="digestive"> 🍽 Digestive Issues</label>
+    <label class="symptom-card"><input type="checkbox" id="nausea"> 🤢 Nausea</label>
+    <label class="symptom-card"><input type="checkbox" id="vomit"> 🤮 Vomiting</label>
+    <label class="symptom-card"><input type="checkbox" id="diarrhea"> 💩 Diarrhea</label>
+    <label class="symptom-card"><input type="checkbox" id="chills"> 🥶 Chills</label>
+
+  </div>
+
+  <!-- ================= SYMPTOM DETAILS ================= -->
+  <h3>Symptom details</h3>
+  <div class="details-grid">
+
+    <div class="detail-card">
+      <span>Overall severity</span>
+      <select id="severitySelect">
+        <option value="mild">Mild</option>
+        <option value="moderate">Moderate</option>
+        <option value="severe">Severe</option>
+      </select>
+    </div>
+
+    <div class="detail-card">
+      <span>Duration of symptoms</span>
+      <select id="durationSelect">
+        <option value="short">&lt; 2 days</option>
+        <option value="medium">3–7 days</option>
+        <option value="long">&gt; 7 days</option>
+      </select>
+    </div>
+
+  </div>
+
+  <!-- ================= ABOUT YOU ================= -->
+  <h3>About you</h3>
+  <div class="about-grid">
+
+    <div class="detail-card">
+      <span>Age group</span>
+      <select id="ageGroup">
+        <option value="adult">18–60 years</option>
+        <option value="child">Under 18</option>
+        <option value="older">Above 60</option>
+      </select>
+    </div>
+
+    <div class="detail-card">
+      <span>Pregnancy</span>
+      <select id="pregnancyStatus">
+        <option value="no">Not pregnant / not applicable</option>
+        <option value="yes">Pregnant</option>
+      </select>
+    </div>
+
+  </div>
+
+  <p style="font-size:14px; color:#555;">
+    ⚠ This tool is for educational purposes only and not a medical diagnosis.
+  </p>
+
+  <button onclick="checkSymptoms()">Check Risk</button>
+
+  <div id="resultBox" class="result-box" style="display:none;"></div>
+
+</div>
+
+<footer>
+  <p>© 2025 HealthConnect. All rights reserved.</p>
+</footer>
+
+<script src="voice.js"></script>
+<script src="voice-control.js"></script>
+
+</body>
+</html>
